@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 st.title("    🩺 Diabetes Prediction App")
 
-st.image("dia.jpg")
+st.image("p3.avif")
 df=pd.read_csv("final.csv")
 
 
