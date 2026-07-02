@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import pickle
 st.title("    🩺 Diabetes Prediction App")
-#st.write(" ")
 
 st.image("dia.jpg")
 df=pd.read_csv("final.csv")
@@ -49,9 +48,9 @@ if st.sidebar.button("Predict"):
     myinput = pd.DataFrame(myinput, columns=columns)
 
     result = model.predict(myinput)
-    st.subheader("Prediction Result")
+    st.sidebar.subheader("Prediction Result")
 
     if result[0] == 1:
-        st.error("⚠️ Diabetes Detected")
+        st.sidebar.error("⚠️ Diabetes Detected")
     else:
-        st.success("✅ No Diabetes Detected")
+        st.sidebar.success("✅ No Diabetes Detected")
